@@ -10,7 +10,7 @@ import getHomeData from "../network/home";
 import getData from "../network/data";
 // import Register from "../components/register";
 // import Content from "../components/content";
-import axios from "axios";
+// import axios from "axios";
 export default {
   name: "Home",
   components: {
@@ -30,8 +30,8 @@ export default {
   },
   created() {
     getHomeData().then((res) => {
-      console.log(res.data);
-      // console.log(res.data.age)
+      console.log(res.data.age);
+      // console.log(res.data)
       this.users = res.data.User;
     });
     getData().then((res)=> {
