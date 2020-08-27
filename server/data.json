@@ -1,0 +1,28 @@
+{
+  "User":[
+    {
+      "id":"wuaixn",
+      "password":"12387456",
+      "age":18,
+      "gender":1
+    },
+    {
+      "id":"sgsgsg",
+      "password":"446213",
+      "age":19,
+      "gender":0
+    },
+    {
+      "id":"wuaixndfhd",
+      "password":"123456",
+      "age":20,
+      "gender":0
+    },
+    {
+      "id":"sfgsdhd",
+      "password":"sgsgs4514",
+      "age":21,
+      "gender":1
+    }
+  ]
+}
