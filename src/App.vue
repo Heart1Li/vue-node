@@ -1,26 +1,31 @@
 <template>
   <div id="app">
-    <hearder-bar ></hearder-bar>
+    <NavBar ></NavBar>
     <router-view/>
+    <Footer></Footer>
+    <back-top></back-top>
   </div>
 </template>
 <script>
-import HearderBar from './components/herader-bar'
+import NavBar from './components/content/navbar/NavBar'
+import Footer from './components/content/footer/Footer'
+import BackTop from './components/common/backtop/BackTop'
 export default {
   name:'App',
   components:{
-    HearderBar,
+    NavBar,
+    Footer,
+    BackTop,
   }
 }
 </script>
 <style scoped>
   @import url(./assets/css/normalize.css);
 
- #app {
-     height: 100vh; 
+  #app {
+    background-color:whitesmoke
   }
-  
-
+ 
 </style>>
 
 

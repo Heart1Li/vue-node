@@ -1,30 +1,39 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Massage from '../views/Massage'
-import Category from '../views/Category'
-import Comment from '../views/Comment'
-import Profile from '../views/Profile'
 
+// import MassageBoard from '../views/MassageBoard'
+// import Category from '../views/Category'
+// import Comment from '../views/Comment'
+// import Profile from '../views/Profile'
+
+const Home = () => import('../views/Home')
+const Archive = () => import('../views/Archive')
+const Board = () => import('../views/Board')
+const Category =( ) => import('../views/Category')
+const Profile = () => import('../views/Profile')
 Vue.use(VueRouter)
 
   const routes = [
+    {
+      path: '',
+      redirect:'/home'
+    },
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: Home
   },
   {
-    path:'/massage',
-    component: Massage
+    path:'/archive',
+    component: Archive
   },
   {
     path:'/Category',
     component: Category
   },
   {
-    path:'/Comment',
-    component: Comment
+    path:'/board',
+    component: Board,
   },
   {
     path:'/Profile',
