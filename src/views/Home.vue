@@ -6,16 +6,13 @@
     <main class="main">
       <div class="left">
         
-          <article-left :content="article[0]"></article-left>
-          <article-right :article1="article[1]"></article-right>
+          <article-left v-if="article[0]" :contentLeft="article[0]"></article-left>
+          <article-right v-if="article[1]" :contentRight="article[1]"></article-right>
         
       </div>
       <div class="right">
         <div id="component-time" class="component">组件一</div>
         <div id="component-category" class="component">组件二</div>
-        <div id="component-test" class="component">组件二</div>
-        <div id="component-test" class="component">组件二</div>
-        <div id="component-test" class="component">组件二</div>
       </div>
     </main>
   </div>
@@ -46,7 +43,7 @@ export default {
   },
   created() {
     getArticleData().then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       this.article = res.data;
     });
     // getData().then((res) => {

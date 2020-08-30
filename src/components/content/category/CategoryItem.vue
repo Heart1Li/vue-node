@@ -1,12 +1,11 @@
 <template>
-  <li @click="itemClick">
+  <div class="category-item" @click="itemClick">
     <slot></slot>
-  </li>
+  </div>
 </template>
-
 <script>
 export default {
-  name:'NavBarItem',
+  name:'CategoryItem',
   props:{
     path:String,
   },
@@ -17,9 +16,8 @@ export default {
       this.$router.push(this.path).catch(err => {err})
       // this.isActive = true
     }
-  }
+  },
+ 
 
 }
 </script>
-<style scoped>
-</style>

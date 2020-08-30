@@ -4,10 +4,10 @@
           <div class="article-container-1">
             <header>
               <p class="article-title">1</p>
-              <p class="article-time">{{article1.time}}</p>
+              <p class="article-time">{{contentRight.time}}</p>
             </header>
             <main>
-              <p class="article-content">{{article1.contnet}}</p>
+              <p class="article-content">{{contentRight.contnet}}</p>
             </main>
             <footer>
               <button>详情</button>
@@ -20,7 +20,7 @@
 export default {
   name:'ArticleLeft',
   props:{
-    article1:Object,
+    contentRight:Object,
   }
 }
 </script>

@@ -3,19 +3,19 @@
     <NavBar ></NavBar>
     <router-view/>
     <Footer></Footer>
-    <back-top></back-top>
+    <!-- <back-top></back-top> -->
   </div>
 </template>
 <script>
 import NavBar from './components/content/navbar/NavBar'
 import Footer from './components/content/footer/Footer'
-import BackTop from './components/common/backtop/BackTop'
+// import BackTop from './components/common/backtop/BackTop'
 export default {
   name:'App',
   components:{
     NavBar,
     Footer,
-    BackTop,
+    // BackTop,
   }
 }
 </script>

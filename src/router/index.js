@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+
 // import MassageBoard from '../views/MassageBoard'
 // import Category from '../views/Category'
 // import Comment from '../views/Comment'
@@ -11,6 +12,7 @@ const Archive = () => import('../views/Archive')
 const Board = () => import('../views/Board')
 const Category =( ) => import('../views/Category')
 const Profile = () => import('../views/Profile')
+const CategoryView =() => import('../views/CategoryView')
 Vue.use(VueRouter)
 
   const routes = [
@@ -28,15 +30,19 @@ Vue.use(VueRouter)
     component: Archive
   },
   {
-    path:'/Category',
+    path:'/category',
     component: Category
+  },
+  {
+    path:'/category/:path',
+    component:CategoryView
   },
   {
     path:'/board',
     component: Board,
   },
   {
-    path:'/Profile',
+    path:'/profile',
     component: Profile
   },
 ]
