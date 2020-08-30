@@ -12,6 +12,10 @@ export default {
 
 <style scoped>
   .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     min-height: 200px;
     margin: 0 18%;
     margin-top: -50px;

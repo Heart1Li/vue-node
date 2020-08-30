@@ -9,6 +9,20 @@ const { db } = require('../models/article');
 
 router.get('/api/article', async(req, res) => {
   let articles = await Article.find()
+  // console.log(articles)
+  res.send(articles)
+  
+  // article.forEach(function (mag) {
+  //   res.send(mag)
+  // })
+  // res.send('index')
+  
+})
+
+router.get('/api/article/:id', async(req, res) => {
+  // console.log(req)
+  let articles = await Article.findById(req.params.id)
+  console.log(articles)
   res.send(articles)
   // article.forEach(function (mag) {
   //   res.send(mag)
@@ -17,6 +31,18 @@ router.get('/api/article', async(req, res) => {
   
 })
 
+router.get('/api/category/:type', async(req, res) => {
+  console.log(req.params)
+  // let articles = await Article.find({classfiy:`${req.params.type}`})
+  let articles = await Article.find({classfiy:'blog'})
+  console.log(articles)
+  res.send(articles)
+  // article.forEach(function (mag) {
+  //   res.send(mag)
+  // })
+  // res.send('index')
+  
+})
 
 
 // router.post('/find', (req, res) => {
