@@ -56,7 +56,7 @@ export default {
 padding: 0 3%;
 }
 .category-tag {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   padding: 0;
   text-decoration: none;
 }

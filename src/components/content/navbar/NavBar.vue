@@ -24,9 +24,9 @@
           <nav-bar-item path="/profile">
             <a href="#" class="nav-item" >关于我</a>
           </nav-bar-item>
-          <nav-bar-item>
+          <!-- <nav-bar-item>
             <a href="#" class="nav-item">搜索</a>
-          </nav-bar-item>
+          </nav-bar-item> -->
         </ul>
       </div>
     </div>
@@ -53,6 +53,7 @@ export default {
   /* width: 100%; */
   height: 40px;
   padding: 12px 16px;
+  /* background-color:whitesmoke; */
   /* z-index: 999; */
   /* background-color: darkgrey; */
   /* line-height: 40px; */

@@ -20,6 +20,7 @@
 export default {
   name:'ArticleLeft',
   props:{
+    path:String,
     contentRight:Object,
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="article">
+  <div class="article" @click="itemClick">
           <div class="article-img-container"></div>
           <div class="article-container">
             <header>
@@ -20,7 +20,14 @@
 export default {
   name:'ArticleLeft',
   props:{
+    path:String,
     contentLeft:Object,
+  },
+  methods:{
+    itemClick(){
+      console.log('1');
+      this.$router.push(this.path).catch(err => {err});
+    }
   }
 }
 </script>

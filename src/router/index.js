@@ -8,11 +8,13 @@ import VueRouter from 'vue-router'
 // import Profile from '../views/Profile'
 
 const Home = () => import('../views/Home')
+const ArticleView = () => import('../views/ArticleView')
 const Archive = () => import('../views/Archive')
 const Board = () => import('../views/Board')
 const Category =( ) => import('../views/Category')
 const Profile = () => import('../views/Profile')
 const CategoryView =() => import('../views/CategoryView')
+
 Vue.use(VueRouter)
 
   const routes = [
@@ -24,6 +26,10 @@ Vue.use(VueRouter)
     path: '/home',
     name: 'Home',
     component: Home
+  },
+  {
+    path:'/article/:id',
+    component:ArticleView,
   },
   {
     path:'/archive',

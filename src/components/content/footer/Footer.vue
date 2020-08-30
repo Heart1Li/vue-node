@@ -15,7 +15,7 @@ footer .text-center {
     /* height: 100px; */
     text-align: center;
     margin: 0 auto;
-    margin-top:5%;
+    margin-top:15%;
     /* border: 1px solid #000; */
   }
 

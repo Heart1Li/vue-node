@@ -21,9 +21,16 @@ export default {
 </script>
 <style scoped>
   @import url(./assets/css/normalize.css);
-
+  /* html,body {
+    background-color: tomato;
+  } */
   #app {
-    background-color:whitesmoke
+    position: relative;
+    background-color:whitesmoke;
+    min-height:100vh;
+  }
+  .footer {
+    margin: 0 auto;
   }
  
 </style>>
