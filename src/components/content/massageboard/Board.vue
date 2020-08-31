@@ -6,8 +6,8 @@
           <el-input v-model="board.name"></el-input>
         </el-form-item>
 
-        <el-form-item label="massage">
-          <el-input v-model="board.massage"></el-input>
+        <el-form-item label="message">
+          <el-input v-model="board.message"></el-input>
         </el-form-item>
 
         <el-form-item>
@@ -20,30 +20,41 @@
 </template>
 
 <script>
+
+
 export default {
   name: "Board",
   data() {
     return {
+      commitdata: {},
       board: {
-        name:'',
-        massage:'',
+        name: "",
+        message: "",
       },
     };
   },
   methods: {
-      onSubmit() {
-        console.log('submit!');
-        this.$message({
-          showClose: true,
-          message: '提交成功',
-          type: 'success'
-        });
-      }
-    }
+    
+    onSubmit() {
+      console.log("submit!");
+      this.$emit('showBoardData',this.board);
+
+
+      
+      // console.log(this.board.name)
+      
+      this.$message({
+        showClose: true,
+        message: "提交成功",
+        type: "success",
+      });
+    },
+  },
+
+  
 };
 </script>
 
 
 <style scoped>
-
 </style>

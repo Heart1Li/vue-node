@@ -1,0 +1,37 @@
+{
+  "id": "2036773",
+  "name": "vue-blog",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1232634",
+      "name": "qq",
+      "font_class": "qq",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "1917137",
+      "name": "微信",
+      "font_class": "wechat",
+      "unicode": "e802",
+      "unicode_decimal": 59394
+    },
+    {
+      "icon_id": "7275151",
+      "name": "email (Filled)",
+      "font_class": "emailFilled",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "11983543",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "ea0b",
+      "unicode_decimal": 59915
+    }
+  ]
+}

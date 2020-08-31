@@ -4,7 +4,8 @@ let router = express.Router();
 require('./linkDB');
 let Users = require('../models/user');
 let Article = require('../models/article');
-const { db } = require('../models/article');
+let Commits = require('../models/commit');
+// const { db } = require('../models/article');
 // let Users = require('../modles/user')
 
 router.get('/api/article', async(req, res) => {
@@ -44,6 +45,21 @@ router.get('/api/category/:type', async(req, res) => {
   
 })
 
+router.get('/api/commit', async (req, res) => {
+  let commits = await Commits.find()
+    res.send(commits)
+})
+
+router.post('/api/commit/create',async (req, res) => {
+  // console.log(req)
+  req.on("data", function (data) {
+    // const commits =  Commits.create(data.toString())
+    const commits =  Commits.create(JSON.parse(data.toString()))
+   res.send(commits)
+        console.log(JSON.parse(data.toString()))
+    });
+  
+})
 
 // router.post('/find', (req, res) => {
 
