@@ -36,8 +36,8 @@ export default {
 .article {
     /* background-color: pink; */
     width: 100%;
-    height: 200px;
-    margin-bottom: 3px;
+    height: 250px;
+    margin-bottom: 5%;
     /* border-bottom: 1px solid #000; */
     border-radius: 10%;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
@@ -48,8 +48,8 @@ export default {
     /* display: inline-block; */
 
     float: right;
-    width: 200px;
-    height: 200px;
+    width: 35%;
+    height: 250px;
     background: url('../../../assets/img/photo.png');
     background-size: cover;
   }
@@ -59,8 +59,8 @@ export default {
      */
     position: relative;
     float: left;
-    height: 200px;
-    width: calc(100% - 200px);
+    height: 250px;
+    width: calc(65%);
     background-color: white;
   }
 .article-container-1 header{

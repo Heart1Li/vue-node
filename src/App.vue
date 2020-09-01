@@ -30,8 +30,9 @@ export default {
   } */
   #app {
     position: relative;
-    background-color:whitesmoke;
+    background-color:white;
     min-height:100vh;
+    padding-top:1px;
   }
   .footer {
     margin: 0 auto;

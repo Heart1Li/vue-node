@@ -5,10 +5,20 @@
     </ImgContainer>
     <main class="main">
       <div class="left">
+        <div v-if="article">
+          <article-left
+          v-for="item in this.article"
+          :key="item.id"
+          :contentLeft="item"
+          :path="`/article/${item._id}`"
+        ></article-left>
+        </div>
         
-          <article-left v-if="article[0]" :contentLeft="article[0]" :path="`/article/${article[0]._id}`"></article-left>
-          <article-right v-if="article[1]" :contentRight="article[1]" :path="`/article/${article[1]._id}`"></article-right>
-        
+        <!-- <article-right
+          v-if="article[1]"
+          :contentRight="article[1]"
+          :path="`/article/${article[1]._id}`"
+        ></article-right> -->
       </div>
       <div class="right">
         <div id="component-time" class="component">组件一</div>
@@ -21,7 +31,7 @@
 <script>
 import ImgContainer from "../components/common/img_container/ImgContainer";
 import articleLeft from "../components/content/article/ArticleLeft";
-import articleRight from "../components/content/article/ArticleRight";
+// import articleRight from "../components/content/article/ArticleRight";
 // @ is an alias to /src
 import getArticleData from "../network/article";
 // import getData from "../network/data";
@@ -31,26 +41,36 @@ export default {
   components: {
     ImgContainer,
     articleLeft,
-    articleRight,
+    // articleRight,
   },
   data() {
     return {
+      isShow:false,
       article: [],
       currentDate: new Date(),
-      users: {},
-      data: {},
+      // users: {},
+      // data: {},
     };
+  },
+  computed:{
+  },
+
+  methods: {
   },
   created() {
     getArticleData().then((res) => {
       // console.log(res.data);
       this.article = res.data;
     });
+    
     // getData().then((res) => {
     //   console.log(res.data);
     // });
   },
-  methods: {},
+  mounted(){
+    // console.log(article[0])
+  }
+ 
 };
 </script>
 
@@ -61,7 +81,7 @@ export default {
   /* width: 100%; */
 
   min-height: 500px;
-  margin: -50px 5% 0 18%;
+  margin: -50px 8% 0 8%;
   margin-top: -50px;
 }
 
@@ -70,12 +90,12 @@ export default {
   width: 100%;
   min-height: 200px;
   min-width: 500px;
-  background-color: white;
+  /* background-color: white; */
   margin-right: 5%;
 }
 
 .main .right {
-  background-color: whitesmoke;
+  background-color: white;
   min-height: 200px;
   min-width: 250px;
   /* margin-left: 5%; */
